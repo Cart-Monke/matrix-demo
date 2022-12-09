@@ -25,6 +25,7 @@ function spawnChar(col) {
     newChar.x = randomInt(cols) * gridSize;
     newChar.y = 0;
     newChar.char = randomInt(1)
+
     chars.push(newChar);
 }
 
@@ -34,7 +35,7 @@ function render() {
 
     chars.forEach((char, index) => {
         ctx.fillStyle = "rgba(0, 254, 0, 1)";
-        ctx.fillText(char.char, char.x, char.y);
+        ctx.fillText(String.fromCharCode(randomInt(128)), char.x, char.y);
 
         char.y += gridSize;
 
@@ -44,7 +45,6 @@ function render() {
     })
 }
 
-spawnChar();
 setInterval(spawnChar, 10);
 setInterval(render, 50)
 
