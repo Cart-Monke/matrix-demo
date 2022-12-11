@@ -11,6 +11,7 @@ html {
 
 .matrix {
   height: 100%;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -22,6 +23,7 @@ html {
 
 :root {
   --opacity: 0;
+  font-size: 1.3vw;
 }
 
 p {
@@ -32,10 +34,10 @@ p {
 
 .index__content {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   width: 80%;
   margin: auto;
-  margin-bottom: 5%;
 }
 
 .index__content > * {
@@ -44,7 +46,8 @@ p {
 
 #index__header {
  text-align: center;
- margin: 5% 0%;
+ margin: 5vh 0%;
+ font-size: 2.5rem;
 }
 
 #index__fade-layer {
@@ -66,7 +69,7 @@ p {
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
 
@@ -92,7 +95,7 @@ footer {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgba(0, 254, 0, 1);
 
-  font-size: 5em;
+  font-size: 5rem;
   font-family: cybersecurity;
     text-shadow: 2px 2px 8px rgba(0, 255, 55, 0.66);
   transform: translate(-50%, -50%);
@@ -101,7 +104,7 @@ footer {
 #matrix__subheader { 
   font-family: courier  ;
   color: rgba(0, 254, 0, 1);
-  font-size: 2em;
+  font-size: 2rem;
   transform: translate(-50%, 200%);
 }
 
@@ -186,3 +189,32 @@ footer {
   }
 }
 
+@media screen and (max-width: 1000px) {
+  p {
+    font-size: 2.2rem;
+  }
+
+  .index__content > * {
+    width: 90%;
+  }
+
+  .index__content > * > p {
+    margin-bottom: 5vh;
+  }
+
+  .index__content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  p {
+    font-size: 2.2rem;
+  }
+
+  .index__content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
