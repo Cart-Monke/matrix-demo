@@ -1,5 +1,5 @@
-let header = document.getElementById("header");
-let subheader = document.getElementById("subheader");
+let header = document.getElementById("matrix__header");
+let subheader = document.getElementById("matrix__subheader");
 
 let headerText = header.innerHTML;
 let subheaderText = subheader.innerHTML;
@@ -19,7 +19,8 @@ function typewriterEffect(tag, input, delay) {
 
 setTimeout(() => {
   typewriterEffect(header, headerText, 100);
-}, 1000);
+}, 500);
+
 setTimeout(() => {
   typewriterEffect(subheader, subheaderText, 75);
 }, 2500);

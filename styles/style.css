@@ -3,43 +3,186 @@
   padding: 0;
 }
 
-@font-face {
+html {
+  background-color: black;
+  color: rgba(0, 254, 0, 1);
   font-family: cybersecurity;
-  src: url(/fonts/Pointless.ttf)
 }
 
-h1 {
+.matrix {
+  height: 100%;
+  overflow: hidden;
+}
+
+.index {
+  background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/pinstripe-light.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+:root {
+  --opacity: 0;
+}
+
+p {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* INDEX PAGE */
+
+.index__content {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 5%;
+}
+
+.index__content > * {
+  width: 40%;
+}
+
+#index__header {
+ text-align: center;
+ margin: 5% 0%;
+}
+
+#index__fade-layer {
   position: absolute;
-  -webkit-text-fill-color: black; /* Will override color (regardless of order) */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 1;
+}
+
+.fade--animation {
+  animation: fade 2s forwards;
+}
+
+.fade--hide {
+  height: 0% !important;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 10vh;
+  background-color: black;
+}
+
+/* MATRIX PAGE */
+
+#matrix__header, #matrix__subheader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+#matrix__header {
+  -webkit-text-fill-color: black;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgba(0, 254, 0, 1);
+
   font-size: 5em;
   font-family: cybersecurity;
     text-shadow: 2px 2px 8px rgba(0, 255, 55, 0.66);
-  top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
 }
 
-h2 { 
-  position: absolute;
+#matrix__subheader { 
   font-family: courier  ;
   color: rgba(0, 254, 0, 1);
   font-size: 2em;
-  top: 50%;
-  left: 50%;
   transform: translate(-50%, 200%);
 }
 
-.gradient {
+.shutoff {
   width: 100vw;
   height: 100vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  top: 0;
+  left: 0;
+
+  background-color: black;
+  opacity: var(--opacity);
+}
+
+.shutoff__layer {
+  opacity: var(--opacity);
+
+  width: 100%;
+  height: 100%;
+
+  background-color: white;
+}
+
+#shutoff__white {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+#shutoff__black {
+  width: 100%;
+  height:100%;
+  background-color: black;
+}
+
+.shutoff--animate {
+  animation: shutoff 0.5s forwards;
+}
+
+.gradient {
+  width: 100%;
+  height: 100%;
   position: absolute;
 
   background: rgb(0,0,0);
   background: radial-gradient(circle, rgba(0,0,0,0) 28%, rgba(0,0,0,1) 100%);
 }
 
-h1:hover {
-  cursor: pointer;
+@font-face {
+  font-family: cybersecurity;
+  src: url(/fonts/Pointless.ttf)
 }
+
+@keyframes shutoff {
+  0% {
+    width: 100%;
+    height: 100%;
+  }
+
+  50% {
+    width: 100%;
+    height: 2px;
+  }
+
+  100% {
+    width: 0%;
+    height: 0%;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+

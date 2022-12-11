@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="matrix">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,11 +9,16 @@
   </head>
   <body>
     <div class="gradient"></div>
-    <h1 id="header">CYBERSECURITY</h1>
-    <h2 id="subheader">CLICK ANYWHERE TO ENTER</h2>
+    <h1 id="matrix__header">CYBERSECURITY</h1>
+    <h2 id="matrix__subheader">CLICK ANYWHERE TO ENTER</h2>
 
     <canvas id="matrix-canvas"></canvas>
+    <div class="shutoff">
+      <div class="shutoff__layer" id="shutoff--white"></div>
+    </div>
+
     <script src="/javascript/matrix.js"></script>
     <script src="/javascript/typewriter.js"></script>
+    <script src="/javascript/shutoff.js"></script>
   </body>
 </html>
