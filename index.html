@@ -1,51 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" class="index">
+<html lang="en" class="matrix">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matrix Demo</title>
     <link rel="stylesheet" href="/styles/style.css" />
-    <title>Index</title>
   </head>
   <body>
-    <h1 id="index__header">BE SECURE WITH YOUR CYBER</h1>
-    <section class="index__content">
-      <div>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi,
-          nostrum laboriosam, officiis quaerat enim quo quidem repudiandae
-          quibusdam fugit placeat corrupti, sapiente similique! Obcaecati saepe,
-          amet eligendi officia quod assumenda!
-        </p>
-        <br />
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus
-          exercitationem distinctio optio officia, perferendis saepe aliquid
-          incidunt quae excepturi nisi, pariatur fuga quod nulla cum eum quis
-          ullam assumenda omnis.
-        </p>
-      </div>
-      <div>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti
-          quisquam sint sequi. Sit, exercitationem enim. Molestiae ex odio
-          quidem eaque voluptatem nemo aliquid, dolorum enim a deleniti? Sequi,
-          saepe distinctio.
-        </p>
-        <br />
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
-          asperiores enim. Atque doloremque esse aliquam perferendis illum nam
-          enim id, accusamus consequatur recusandae culpa dicta aut maiores
-          quisquam. Sed, dolores!
-        </p>
-      </div>
-    </section>
-    <footer>
-      <p>Jacob Velasquez 2022</p>
-    </footer>
+    <div class="gradient"></div>
+    <h1 id="matrix__header">CYBERSECURITY</h1>
+    <h2 id="matrix__subheader">CLICK ANYWHERE TO ENTER</h2>
 
-    <div id="index__fade-layer"></div>
-    <script src="/javascript/fadein.js"></script>
+    <canvas id="matrix-canvas"></canvas>
+    <div class="shutoff">
+      <div class="shutoff__layer" id="shutoff--white"></div>
+    </div>
+
+    <script src="/javascript/matrix.js"></script>
+    <script src="/javascript/typewriter.js"></script>
+    <script src="/javascript/shutoff.js"></script>
   </body>
 </html>

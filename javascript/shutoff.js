@@ -9,7 +9,7 @@ shutoffWhite.addEventListener("click", () => {
   shutoffWhite.classList.add("shutoff--animate");
   shutoffWhite.addEventListener("animationend", () => {
     setTimeout(() => {
-      window.location.replace("/index.html");
+      window.location.replace("/matrix.html");
     }, 500);
   });
 });
