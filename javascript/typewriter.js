@@ -1,9 +1,6 @@
 let header = document.getElementById("matrix__header");
 let subheader = document.getElementById("matrix__subheader");
 
-let headerText = header.innerHTML;
-let subheaderText = subheader.innerHTML;
-
 header.innerHTML = "";
 subheader.innerHTML = "";
 
@@ -18,9 +15,9 @@ function typewriterEffect(tag, input, delay) {
 }
 
 setTimeout(() => {
-  typewriterEffect(header, headerText, 100);
+  typewriterEffect(header, "CYBERSECURITY", 100);
 }, 500);
 
 setTimeout(() => {
-  typewriterEffect(subheader, subheaderText, 75);
+  typewriterEffect(subheader, "CLICK ANYWHERE TO ENTER", 75);
 }, 2500);
